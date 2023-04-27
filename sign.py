@@ -47,6 +47,7 @@ def ql_env(name):
     global ckArr
     if name in os.environ:
         ckArr = []
+        print(111111111111)
         _data = os.environ[name]
         if "#" in _data:
             _ck = _data.split("#")
@@ -56,7 +57,7 @@ def ql_env(name):
             ckArr = _ck
         else:
             ckArr = _data.split("+")
-    print(ckArr)
+    # print(ckArr)
 
 # def easonfans_sign(easonfanck, easonfancomment):
 #     url = "https://www.easonfans.com/forum/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=2"
@@ -215,6 +216,7 @@ def tip():
 if __name__ == '__main__':
     global ckArr, msg_info, send
     # sendindex = 1
+    
     ql_env(f"{Name_Pinyin}_DATA")
     # ckArr = os.environ.get(f"{Name_Pinyin}_DATA")
     # print(ckArr)
