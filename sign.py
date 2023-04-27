@@ -216,7 +216,7 @@ def tip():
 if __name__ == '__main__':
     global ckArr, msg_info, send
     # sendindex = 1
-    
+    print(f"{Name_Pinyin}_DATA")
     ql_env(f"{Name_Pinyin}_DATA")
     # ckArr = os.environ.get(f"{Name_Pinyin}_DATA")
     # print(ckArr)
