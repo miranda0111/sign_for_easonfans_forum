@@ -51,9 +51,9 @@ def ql_env(name):
         if "#" in _data:
             _ck = _data.split("#")
             ckArr = _ck
-        elif "\n" in _data:
-            _ck = _data.splitlines()
-            ckArr = _ck
+        # elif "\n" in _data:
+        #     _ck = _data.splitlines()
+        #     ckArr = _ck
         else:
             ckArr = _data.split("+")
 
