@@ -23,7 +23,7 @@ jobs:
       - name: Run py
         run: python sign.py
         env:
-          FC_DATA: ${{ secrets.SJ_DATA }}
+          FC_DATA: ${{ secrets.SS_DATA }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
