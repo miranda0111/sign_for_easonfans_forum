@@ -56,6 +56,7 @@ def ql_env(name):
             ckArr = _ck
         else:
             ckArr = _data.split("+")
+    print(ckArr)
 
 # def easonfans_sign(easonfanck, easonfancomment):
 #     url = "https://www.easonfans.com/forum/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=2"
