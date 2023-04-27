@@ -27,7 +27,7 @@ requests.packages.urllib3.disable_warnings()
 # ssl._create_default_https_context = ssl._create_unverified_context
 # --------------------------------------------------------------------------------------------
 Script_Name = "神经研究所签到"
-Name_Pinyin = "SJ"
+Name_Pinyin = "SS"
 Script_Change = ""
 Script_Version = "1.0.0"
 # --------------------------------------------------------------------------------------------
