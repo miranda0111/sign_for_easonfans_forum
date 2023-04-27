@@ -51,9 +51,9 @@ def ql_env(name):
         if "#" in _data:
             _ck = _data.split("#")
             ckArr = _ck
-        # elif "\n" in _data:
-        #     _ck = _data.splitlines()
-        #     ckArr = _ck
+        elif "@" in _data:
+            _ck = _data.splitlines()
+            ckArr = _ck
         else:
             ckArr = _data.split("+")
 
@@ -196,7 +196,7 @@ def msg(data):
 
 
 def tip():
-    global ckArr
+    # global ckArr
     print("================ 脚本只支持青龙新版 =================")
     print("============ 具体教程以请自行查看顶部教程 =============")
     
@@ -212,12 +212,12 @@ def tip():
     print(f"📌 共发现 {str(len(ckArr))} 个账号")
 
 if __name__ == '__main__':
-    global ckArr, msg_info, send ,sendindex
-    sendindex = 1
+    global ckArr, msg_info, send
+    # sendindex = 1
     ql_env(f"{Name_Pinyin}_DATA")
     # ckArr = os.environ.get(f"{Name_Pinyin}_DATA")
     # print(ckArr)
     tip()
     asyncio.run(start())
-    if sendindex == 1:
-        send(f"{Script_Name}", msg_info)
+    # if sendindex == 1:
+    send(f"{Script_Name}", msg_info)
