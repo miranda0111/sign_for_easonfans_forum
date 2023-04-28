@@ -11,7 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: SS_DATA
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,7 +23,7 @@ jobs:
       - name: Run py
         run: python sign.py
         env:
-          FC_DATA: ${{ secrets.SS_DATA.SS_DATA }}
+          SJ_DATA: ${{ secrets.SJ_DATA }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
