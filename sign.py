@@ -59,30 +59,7 @@ def ql_env(name):
             ckArr = _data.split("+")
     # print(ckArr)
 
-# def easonfans_sign(easonfanck, easonfancomment):
-#     url = "https://www.easonfans.com/forum/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=2"
-#     headers = {
-#         "Host": "www.easonfans.com",
-#         "Content-Type": "application/x-www-form-urlencoded",
-#         "Origin": "https//www.easonfans.com",
-#         "Accept-Encoding": "gzip, deflate, br",
-#         "Cookie": "sNgB_2132_connect_is_bind=0; sNgB_2132_lastact=1682303687%09plugin.php%09; sNgB_2132_lip=183.63.119.39%2C1682303349; sNgB_2132_sid=oo4Qq8; sNgB_2132_ulastactivity=2c6ek6SV%2FSk6IWh43w%2B4TQ5Lsq%2F54EsWnoP280WSUY45vSvzT0eF; security_session_verify=62e02f61336ade32fd941cb8b4f59735; sNgB_2132_forum_lastvisit=D_31_1682254086D_17_1682254089; sNgB_2132_visitedfid=17D31; sNgB_2132_nofavfid=1; sNgB_2132_auth=0db0bNrGhE69Bz1d8xekxxdD%2FcKamp6hvagtHk30WbfOBw91MVUml1epRd%2Bjktq6JFfuSOGi5K7zHTCrf37Kb%2Bgrvw; sNgB_2132_lastcheckfeed=60818%7C1682250507; sNgB_2132_lastvisit=1682246886; sNgB_2132_saltkey=kb96ZElc",
-#         "Connection": "keep-alive",
-#         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-#         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.33(0x18002129) NetType/WIFI Language/zh_CN",
-#         "Referer": "https//www.easonfans.com/forum/plugin.php?id=dsu_paulsign",
-#         "Content-Length": "146",
-#         "Accept-Language": "zh-CN,zh-Hans;q=0.9"
-#     }
-#     data = f"formhash=4c2783cc&qdxq=fd&qdmode=1&todaysay={easonfancomment}&fastreply=0"
-#     response = requests.request("POST", url, headers=headers, data=data)
-#     html = response.text
-#     soup = BeautifulSoup(html, 'xml')
-#     # info = soup.body.get_text()
 
-#     nam = re.findall('<div style="line-height:30px; text-indent:2em;">(.*?).</div>', html)[0]
-
-#     print(nam)
 
 async def easonfans_sign(easonfanck, easonfancomment):
     url = "https://www.easonfans.com/forum/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=2"
@@ -91,7 +68,7 @@ async def easonfans_sign(easonfanck, easonfancomment):
         "Content-Type": "application/x-www-form-urlencoded",
         "Origin": "https//www.easonfans.com",
         "Accept-Encoding": "gzip, deflate, br",
-        "Cookie": "sNgB_2132_connect_is_bind=0; sNgB_2132_lastact=1682303687%09plugin.php%09; sNgB_2132_lip=183.63.119.39%2C1682303349; sNgB_2132_sid=oo4Qq8; sNgB_2132_ulastactivity=2c6ek6SV%2FSk6IWh43w%2B4TQ5Lsq%2F54EsWnoP280WSUY45vSvzT0eF; security_session_verify=62e02f61336ade32fd941cb8b4f59735; sNgB_2132_forum_lastvisit=D_31_1682254086D_17_1682254089; sNgB_2132_visitedfid=17D31; sNgB_2132_nofavfid=1; sNgB_2132_auth=0db0bNrGhE69Bz1d8xekxxdD%2FcKamp6hvagtHk30WbfOBw91MVUml1epRd%2Bjktq6JFfuSOGi5K7zHTCrf37Kb%2Bgrvw; sNgB_2132_lastcheckfeed=60818%7C1682250507; sNgB_2132_lastvisit=1682246886; sNgB_2132_saltkey=kb96ZElc",
+        "Cookie": easonfanck,
         "Connection": "keep-alive",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.33(0x18002129) NetType/WIFI Language/zh_CN",
@@ -102,7 +79,7 @@ async def easonfans_sign(easonfanck, easonfancomment):
     data = f"formhash=4c2783cc&qdxq=fd&qdmode=1&todaysay={easonfancomment}&fastreply=0"
     response = requests.request("POST", url, headers=headers, data=data)
     html = response.text
-    soup = BeautifulSoup(html, 'xml')
+    # soup = BeautifulSoup(html, 'xml')
     # info = soup.body.get_text()
 
     nam = re.findall('<div style="line-height:30px; text-indent:2em;">(.*?).</div>', html)[0]
