@@ -24,7 +24,7 @@ try:
 except Exception as e:
     print(e)
 requests.packages.urllib3.disable_warnings()
-# ssl._create_default_https_context = ssl._create_unverified_context
+ssl._create_default_https_context = ssl._create_unverified_context
 # --------------------------------------------------------------------------------------------
 Script_Name = "神经研究所签到"
 Name_Pinyin = "SJ"
