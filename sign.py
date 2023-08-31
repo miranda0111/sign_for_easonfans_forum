@@ -41,13 +41,29 @@ async def start():
         ck = data
         # await get_user(ck)
         await asyncio.sleep(1)
-        await easonfans_sign(ck,content)
+        easonfans_sign(ck,content)
+        time.sleep(random.randint(11, 22))
+        
+        easonfans_gplay(ck)
+        time.sleep(random.randint(11, 22))
+        
+        easonfans_gplay(ck)
+        time.sleep(random.randint(11, 22))
+        
+        easonfans_gplay(ck)
+        
+        uids = [str(random.randint(46011, 52786)) for _ in range(10)]
+        message = "%E5%8E%9F%E8%B0%85%E6%88%91%E4%B8%8D%E5%86%8D%E9%80%81%E8%8A%B1%EF%BC%8C%E4%BC%A4%E5%8F%A3%E5%BA%94%E8%A6%81%E7%BB%93%E7%96%A4%EF%BC%8C%E8%8A%B1%E7%93%A3%E9%93%BA%E6%BB%A1%E5%BF%83%E9%87%8C%E5%9D%9F%E5%9C%BA%E6%89%8D%E5%AE%B3%E6%80%95%E3%80%82%E2%80%94%E2%80%94%E9%99%88%E5%A5%95%E8%BF%85%5Bem%3A5%3A%5D%5Bem%3A9%3A%5D%5Bem%3A11%3A%5D"
+        for e in range(0, len(uids)):
+            uid = uids[e]
+            easonfan_comment(ck,uid,message)
+            time.sleep(random.randint(11, 22))
         
 def ql_env(name):
     global ckArr
     if name in os.environ:
         ckArr = []
-        print(111111111111)
+        # print(111111111111)
         _data = os.environ[name]
         if "#" in _data:
             _ck = _data.split("#")
@@ -62,21 +78,28 @@ def ql_env(name):
 
 
 async def easonfans_sign(easonfanck, easonfancomment):
-    url = "https://www.easonfans.com/forum/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=2"
+    # easonfanck = "sNgB_2132_saltkey=ST1yI81S; sNgB_2132_lastvisit=1692674624; sNgB_2132_webtctzcountforumindex=0; sNgB_2132_con_request_uri=http%3A%2F%2Feasonfans.com%2Fforum%2Fconnect.php%3Fmod%3Dlogin%26op%3Dcallback%26referer%3Dforum.php; sNgB_2132_client_created=1692678235; sNgB_2132_client_token=2506D8E06A9FE0F0F0E185755078904E; sNgB_2132_auth=6253Ff6csAbRJcpjdVWG%2BlDSYJNsO%2FRbyjCohhM%2F9Zb637XTDyvbHAEuicXI0GZhLXrmu1hVfX0JwdZvH%2BmyD2hoqw; sNgB_2132_creditnotice=0D0D2D0D0D0D0D0D0D60818; sNgB_2132_creditrule=%E6%AF%8F%E5%A4%A9%E7%99%BB%E5%BD%95; sNgB_2132_connect_login=1; sNgB_2132_connect_is_bind=1; sNgB_2132_connect_uin=2506D8E06A9FE0F0F0E185755078904E; security_session_verify=72c17bb8b9a1443d0945f1ff7033e9d9; sNgB_2132_lip=183.46.169.55%2C1693039880; sNgB_2132_creditbase=0D0D1552D0D0D0D0D0D0; sNgB_2132_nofavfid=1; sNgB_2132_onlineusernum=242; sNgB_2132_sid=hyWxm7; sNgB_2132_ulastactivity=5158Z%2FdUPa%2BM%2BnnhQPpSBdZnFwzfuM4ne35DLhDJU%2F4TXU%2FXhwRp; sNgB_2132_home_diymode=1; sNgB_2132_webtctzcounthomespace=0; sNgB_2132_lastact=1693039932%09plugin.php%09"
+    # easonfancomment = ""
+    # easonfancomment =1 "%E6%88%91%E8%A6%81%E8%B5%9A%E7%A7%AF%E5%88%86%EF%BC%81"
+
+
+    url = "http://easonfans.com//forum/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=2"
     headers = {
-        "Host": "www.easonfans.com",
+        "Host": "easonfans.com",
         "Content-Type": "application/x-www-form-urlencoded",
-        "Origin": "https//www.easonfans.com",
-        "Accept-Encoding": "gzip, deflate, br",
+        "Origin": "http//easonfans.com",
+        "Accept-Encoding": "gzip, deflate",
         "Cookie": easonfanck,
         "Connection": "keep-alive",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.33(0x18002129) NetType/WIFI Language/zh_CN",
-        "Referer": "https//www.easonfans.com/forum/plugin.php?id=dsu_paulsign",
-        "Content-Length": "146",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9"
+        "User-Agent": "Mozilla/5.0 (Linux; Android 13; 2304FPN6DC Build/TKQ1.221114.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.104 Mobile Safari/537.36",
+        "Referer": "http://easonfans.com/forum/plugin.php?id=dsu_paulsign:sign&mobile=2",
+        "Content-Length": "110",
+        "Cache-Control": "max-age=0",
+        "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Upgrade-Insecure-Requests": "1"
     }
-    data = f"formhash=4c2783cc&qdxq=fd&qdmode=1&todaysay={easonfancomment}&fastreply=0"
+    data = f"formhash=7aea1da7&qdxq=kx&qdmode=1&todaysay={easonfancomment}&fastreply=0"
     response = requests.request("POST", url, headers=headers, data=data)
     html = response.text
     # soup = BeautifulSoup(html, 'xml')
@@ -86,6 +109,52 @@ async def easonfans_sign(easonfanck, easonfancomment):
 
     msg(nam)
 
+def easonfans_gplay(easonfanck):
+    url = "http://easonfans.com/forum/plugin.php?id=gplayconstellation:front&mod=index&formhash=7aea1da7&act=game_result&inajax=1&ajaxtarget=myaward"
+    headers = {
+        "Host":"easonfans.com",
+        "X-Requested-With":"XMLHttpRequest",
+        "Accept-Language":"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Accept-Encoding":"gzip, deflate",
+        "Accept":"*/*",
+        "User-Agent":"Mozilla/5.0 (Linux; Android 13; 2304FPN6DC Build/TKQ1.221114.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.104 Mobile Safari/537.36",
+        "Connection":"keep-alive",
+        "Referer":"http://easonfans.com/forum/plugin.php?id=gplayconstellation:front&act=phone&mobile=2",
+        "Cookie":easonfanck
+    }
+    response = requests.get(url, headers=headers)
+    html = response.text
+    nam = re.findall('<input type="hidden" id="out_activity_credit" value="(.*?)">', html)[0]
+    msg(f"获得{nam}金钱")
+
+def easonfan_comment(easonfanck,uid,message):
+
+    url = "http://easonfans.com/forum/home.php?mod=spacecp&ac=comment"
+    
+    headers = {
+        "Host": "easonfans.com",
+        "Connection": "keep-alive",
+        "Content-Length": "515",
+        "Cache-Control": "max-age=0",
+        "Upgrade-Insecure-Requests": "1",
+        "Origin": "http://easonfans.com",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 13; 2304FPN6DC Build/TKQ1.221114.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.104 Mobile Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "Referer": f"http://easonfans.com/forum/home.php?mod=space&uid={uid}&do=wall&mobile=2",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Cookie": easonfanck
+    }
+    data = f"message={message}&referer=home.php%3Fmod%3Dspace%26uid%3D%26do%3Dwall&id={uid}&idtype=uid&handlekey=qcwall_{uid}&commentsubmit=true&quickcomment=true&commentsubmit_btn=true&formhash=7aea1da7"
+    response = requests.request("POST", url, headers=headers, data=data)
+    html = response.text
+
+    # soup = BeautifulSoup(html, 'xml')
+    # info = soup.body.get_text()
+    
+    nam = re.findall('<p class="ashow cl">(.*?).</p>', html)[0]
+    msg(nam)
 # ====================================================================
 def last_version(name, mold):
     url = ''
